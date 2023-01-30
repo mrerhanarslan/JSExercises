@@ -30,7 +30,7 @@ let myDynamicNFT={
   nftNetworkName:"Etherium",
   nftPrice:100,
   calculateSellPrice:function (basePrice) {
-      return basePrice*(1+20/100);
+    return basePrice*(1+20/100);
   }
 }
 
