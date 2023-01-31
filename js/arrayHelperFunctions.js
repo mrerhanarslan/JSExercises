@@ -80,3 +80,28 @@ const myNft=[{adi:"erhan",soyad:"arslan",yas:37},{adi:"neslihan",soyad:"arslan",
 const  newObjArray=myNft.map((myobj)=>{return 2023-myobj.yas});
 
 newObjArray.forEach((birthday,index)=>console.log(index+": dogum yili:"+birthday));
+
+const employees=[{id:10,name:"emp1"},{id:11,name:"emp2"},{id:12,name:"emp3"},{id:13,name:"emp3"}];
+
+const res=employees.find((pers)=>pers.id===12);
+console.log("my res: "+res.name);
+
+function myFind(empArray,criteria)
+{
+  for (let i = 0; i < empArray.length; i++) {
+    if (empArray[i].id===criteria)
+    {
+       return empArray[i];
+    }
+  }
+}
+
+console.log(myFind(employees,11).name);
+let initVal=0;
+
+const sayilar=[1,2,3,4,5,6,7,8];
+let sonuc=sayilar.map((sayi)=>sayi*2);
+
+let newArrayWithReduce=sayilar.reduce((preValOfArr,curNumber)=>{preValOfArr.push(curNumber*3); return preValOfArr},[]);
+
+console.log(newArrayWithReduce);
